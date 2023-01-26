@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+*{
+    /* margin: 0.5px; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    overflow-x:hidden;
+    color:#FFF;
+    font-family:Helvetica;
+    -ms-overflow-style : none;
+    
+  }
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+header{
+    /* height: 150px; */
+    
+    min-width: 50%;
+    width: 100%;
+    /* padding-top: 20px; */
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 75%
+  }
+header .nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .nav h1{
+    min-width: 600px;
+}
+
+header .nav ul{
+    min-width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+#page .main_visual{
+    z-index: 1;
+}
+
+#page {
+    overflow:hidden;
+    white-space:nowrap;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#CCC;
+    display:flex;
+    flex-wrap:no-wrap;
+  }
+.pane {
+    min-height: 100vh;
+    flex:0 0 100vw;
+    height:100vh;
+    display:flex;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    background-color: black;
+  }
+  
+.pane:nth-child(4n+2)  {
+    background: rgb(237,237,237);
+background: radial-gradient(circle, rgba(237,237,237,1) 12%, rgba(0,0,0,1) 70%);
+background-color: #CCC;
+  }
+.pane:nth-child(4n+3)  {
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+    perspective: 4000px;
+    perspective-origin: 50% 50%;
+    /* background-color: #EDDE05; */
+  }
+.pane:nth-child(4n+4)  {
+    background-color: #fff;
+  }
+.pane:last-child {
+    background-color: #45CCFF;
+  }
+
+
+
+  /* 돌아가는 A4용지 */
+  .circle {
+    width: 2000px;
+    height: 2000px;
+    margin: 100% 25%;
+    font-size: 50px;
+    /* position: absolute; */
+    transform: scale(0.8) translate(-140px,500px)
+}
+
+.circle .one{
+   /*  margin: 1000px auto; */
+    /* width: 1000px;
+    height: 1000px; */
+    border-radius: 50%;
+    /* background-color: rgb(221, 0, 0); */
+    position: relative;
+    /*  */
+    width: 50%;
+    height: 50%;
+    
+    
+}
+
+.card{
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    /* border : solid 5px black; */
+    transform-origin: top left;
+    overflow: hidden;
+    box-shadow: 25px 25px 25px black;
+    font-size: 100%;
+    transition: all 0.5s;
+    text-align: center;
+    color : white;
+    opacity: 75%;
+    
+   /*  perspective: 1100px; */
+}
+
+.card1 {
+    transform: translate(250px,-633px) /* rotate(60deg) */;
+    background-color: black;
+    
+}
+
+.card2 {
+    transform-origin: bottom left;
+    transform: translate(750px,-633px) rotate(60deg);
+    background-color: black;
+    
+}
+
+.card3 {
+    transform-origin: bottom left;
+    transform: translate(1000px,-200px) rotate(120deg);
+    background-color: black;
+
+}
+
+.card4 {
+    transform-origin: center;
+    transform: translate(250px,933px) rotate(180deg);
+    background-color: black;
+}
+
+.card5{
+    transform-origin: bottom left;
+    transform: translate(250px,233px) rotate(-120deg);
+    background-color: black;
+}
+
+.card6{
+    transform-origin: bottom left;
+    transform: translate(0,-200px) rotate(-60deg);
+    background-color: black;
+}
+
+.circle .one .card:hover {
+    scale: 1.05;
+    /* border-top: solid 20px 20px #fff; */
+    box-shadow: 25px 25px 50px #fff;
+    opacity: 100%;
+}
+
+/* 원 끝 */
+
+/* website redesign */
+.pane  h1{
+    /* position: absolute; */
+    /* color: black; */
+}
+.pane .mid{
+    color: black;
+    /* background-color: beige; */
+    display: flex;
+    margin: 0 auto;
+    width: 2000px;
+    justify-content: space-evenly;
+}
+.pane .mid .inner{
+    margin: 0 auto;
+    width: 40%;
+    /* background-color: #eee; */
+    
+}
+.pane .mid .inner img{
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+}
+.pane .mid .inner p{
+    font-weight: 900;
+    text-align: center;
+    transition:0.3s;
+}
+
+.pane .mid .inner p:hover{
+    scale: 1.1;
+}
+
+
